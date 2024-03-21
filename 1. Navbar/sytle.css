@@ -43,3 +43,7 @@ nav ul li a {
  color: var(--orange-color);
  text-decoration: none;
 }
+
+section {
+    min-height: 50vh;
+}
