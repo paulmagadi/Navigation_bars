@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --bg-color: rgb(173, 173, 173);
+    --text-color: white;
+}
+
+body {
+    background-color: var(--bg-color);
+}
