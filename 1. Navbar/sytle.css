@@ -5,10 +5,41 @@
 }
 
 :root {
-    --bg-color: rgb(173, 173, 173);
-    --text-color: white;
+    --black-color: rgb(0, 0, 0);
+    --orange-color: orange;
+    --white-color: white;
+
 }
 
 body {
-    background-color: var(--bg-color);
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--black-color);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    
+}
+
+nav ul li {
+    padding: 1em;
+}
+
+nav ul li:hover {
+    background-color: var(--white-color);
+}
+
+nav ul li:hover a{
+    color: var(--black-color);
+}
+
+nav ul li a {
+ color: var(--orange-color);
+ text-decoration: none;
 }
