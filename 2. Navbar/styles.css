@@ -36,3 +36,7 @@ nav ul li:first-of-type {
 nav ul li:last-of-type {
     margin-left: auto;
 }
+
+nav ul form input {
+    padding: .3em;
+}
