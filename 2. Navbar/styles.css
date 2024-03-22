@@ -10,10 +10,13 @@ body {
 
 nav {
     width: 100%;
+    background-color: antiquewhite;
+    color: black;
 }
 
 nav ul a {
     text-decoration: none;
+    color: black;
 }
 
 nav ul {
