@@ -102,3 +102,24 @@ nav ul li:hover {
     background-color: red;
 }
 
+
+.sidebar {
+    width: 20%;
+    background-color: rgb(229, 229, 231);
+    overflow-y: scroll;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.sidebar p, .sidebar h1 {
+    padding: 1em;
+}
+
+.sidebar p:hover {
+    background-color: green;
+}
+
+
