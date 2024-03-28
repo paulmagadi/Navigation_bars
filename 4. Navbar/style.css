@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.nav-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-items li {
+    margin-right: 20px;
+}
+
+.nav-items li:last-child {
+    margin-right: 0;
+}
+
+.nav-items li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.scroll-left,
+.scroll-right {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.scroll-left:hover,
+.scroll-right:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
