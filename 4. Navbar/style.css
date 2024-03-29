@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     width: 100%;
@@ -46,4 +46,45 @@ header {
 .scroll-left:hover,
 .scroll-right:hover {
     background-color: rgba(255, 255, 255, 0.1);
+} */
+
+
+header {
+    position: relative;
+}
+
+.nav-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+.scroll-arrow {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: lightgray;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
 }
