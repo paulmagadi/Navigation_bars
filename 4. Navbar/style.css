@@ -54,7 +54,7 @@ header {
 }
 
 .nav-container {
-    overflow-x: auto;
+    overflow-x: hidden;
     white-space: nowrap;
     display: flex;
     align-items: center;
