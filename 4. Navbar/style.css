@@ -54,7 +54,7 @@ header {
 }
 
 .nav-container {
-    overflow-x: hidden;
+    overflow-x: auto;
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ header {
 }
 
 .nav-list li {
-    margin-right: 40px; /* Adjust spacing between items */
+    margin-right: 20px; /* Adjust spacing between items */
 }
 
 .scroll-arrow {
