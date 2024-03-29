@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    width: 100%;
 }
 
 header {
@@ -12,6 +13,7 @@ header {
     display: flex;
     align-items: center;
     overflow-x: auto;
+    width: 100%;
 }
 
 .nav-items {
