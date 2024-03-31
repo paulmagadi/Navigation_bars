@@ -54,11 +54,20 @@ header {
 }
 
 .nav-container {
-    overflow-x: hidden;
+    overflow-x: scroll;
     white-space: nowrap;
     display: flex;
     align-items: center;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.nav-container::-webkit-scrollbar {
+    display: none;
+}
+
 
 .nav-list {
     list-style-type: none;
