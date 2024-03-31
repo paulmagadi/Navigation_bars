@@ -54,8 +54,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const scrollContainer = document.querySelector(".nav-container");
-    const scrollLeftBtn = document.querySelector(".left");
-    const scrollRightBtn = document.querySelector(".right");
+    const scrollLeftBtn = document.getElementById("left");
+    const scrollRightBtn = document.getElementById("right");
 
     scrollLeftBtn.style.display = "none"; // Initially hide the left arrow
 
