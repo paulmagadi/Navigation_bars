@@ -51,10 +51,13 @@ header {
 
 header {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .nav-container {
     overflow-x: auto;
+    width: 100%;
     white-space: nowrap;
     display: flex;
     align-items: center;
