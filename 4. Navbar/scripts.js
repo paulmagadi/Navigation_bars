@@ -27,24 +27,27 @@
 //     });
 // });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const scrollContainer = document.querySelector(".nav-container");
-    const scrollLeftBtn = document.querySelector(".left");
-    const scrollRightBtn = document.querySelector(".right");
 
-    scrollLeftBtn.addEventListener("click", function() {
-        scrollContainer.scroll({
-            left: scrollContainer.scrollLeft - 100,
-            behavior: "smooth"
-        });
-    });
 
-    scrollRightBtn.addEventListener("click", function() {
-        scrollContainer.scroll({
-            left: scrollContainer.scrollLeft + 100,
-            behavior: "smooth"
-        });
-    });
-});
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const scrollContainer = document.querySelector(".nav-container");
+//     const scrollLeftBtn = document.querySelector(".left");
+//     const scrollRightBtn = document.querySelector(".right");
+
+//     scrollLeftBtn.addEventListener("click", function() {
+//         scrollContainer.scroll({
+//             left: scrollContainer.scrollLeft - 100,
+//             behavior: "smooth"
+//         });
+//     });
+
+//     scrollRightBtn.addEventListener("click", function() {
+//         scrollContainer.scroll({
+//             left: scrollContainer.scrollLeft + 100,
+//             behavior: "smooth"
+//         });
+//     });
+// });
 
 
