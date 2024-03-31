@@ -57,9 +57,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const scrollLeftBtn = document.getElementById("left");
     const scrollRightBtn = document.getElementById("right");
 
-    scrollLeftBtn.style.display = "none"; // Initially hide the left arrow
+    // Initially hide the left arrow
+    scrollLeftBtn.style.display = "none";
 
-    scrollContainer.addEventListener("scroll", function() {
+    // Function to check and toggle visibility of scroll arrows
+    function toggleScrollArrows() {
         // If the scroll is at the beginning, hide the left arrow
         if (scrollContainer.scrollLeft === 0) {
             scrollLeftBtn.style.display = "none";
@@ -68,27 +70,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // If the scroll is at the end, hide the right arrow
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth === scrollContainer.scrollWidth) {
+        if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
             scrollRightBtn.style.display = "none";
         } else {
             scrollRightBtn.style.display = "block";
         }
-    });
+    }
 
+    // Initial call to toggle visibility based on initial scroll position
+    toggleScrollArrows();
+
+    // Add event listeners for scroll and button clicks
+    scrollContainer.addEventListener("scroll", toggleScrollArrows);
+    
     scrollLeftBtn.addEventListener("click", function() {
-        scrollContainer.scroll({
-            left: scrollContainer.scrollLeft - 100,
+        scrollContainer.scrollBy({
+            left: -100,
             behavior: "smooth"
         });
     });
 
     scrollRightBtn.addEventListener("click", function() {
-        scrollContainer.scroll({
-            left: scrollContainer.scrollLeft + 100,
+        scrollContainer.scrollBy({
+            left: 100,
             behavior: "smooth"
         });
     });
 });
-
-
-
