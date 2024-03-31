@@ -96,6 +96,19 @@ header {
     background-color: lightgray;
 }
 
+.scroll-arrow {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: lightgray;
+}
+
+
+
+
 .left {
     left: 0;
 }
