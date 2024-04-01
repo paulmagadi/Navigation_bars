@@ -1,99 +1,36 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const scrollLeftBtn = document.querySelector('.scroll-left');
-//     const scrollRightBtn = document.querySelector('.scroll-right');
-//     const navContainer = document.querySelector('.nav-container');
+const navbar = document.querySelector('.navbar');
+const leftButton = document.querySelector('.left-button');
+const rightButton = document.querySelector('.right-button');
 
-//     scrollLeftBtn.addEventListener('click', function() {
-//         navContainer.scrollLeft -= 100;
-//     });
+const scrollStep = 50; // Change this value to adjust the scroll amount
 
-//     scrollRightBtn.addEventListener('click', function() {
-//         navContainer.scrollLeft += 100;
-//     });
-// });
+function handleScrollRight() {
+  navbar.scrollBy({
+    left: scrollStep,
+    behavior: 'smooth'
+  });
+  updateButtonVisibility();
+}
 
+function handleScrollLeft() {
+  navbar.scrollBy({
+    left: -scrollStep,
+    behavior: 'smooth'
+  });
+  updateButtonVisibility();
+}
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const scrollContainer = document.querySelector(".nav-container");
-//     const scrollLeftBtn = document.querySelector(".left");
-//     const scrollRightBtn = document.querySelector(".right");
+function updateButtonVisibility() {
+  leftButton.style.visibility = navbar.scrollLeft === 0 ? 'hidden' : 'visible';
+  rightButton.style.visibility =
+    navbar.scrollLeft + navbar.clientWidth >= navbar.scrollWidth ? 'hidden' : 'visible';
+}
 
-//     scrollLeftBtn.addEventListener("click", function() {
-//         scrollContainer.scrollBy({ left: -100, behavior: "smooth" });
-//     });
+leftButton.addEventListener('click', handleScrollLeft);
+rightButton.addEventListener('click', handleScrollRight);
 
-//     scrollRightBtn.addEventListener("click", function() {
-//         scrollContainer.scrollBy({ left: 100, behavior: "smooth" });
-//     });
-// });
+navbar.addEventListener('scroll', updateButtonVisibility);
 
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//     const scrollContainer = document.querySelector(".nav-container");
-//     const scrollLeftBtn = document.querySelector(".left");
-//     const scrollRightBtn = document.querySelector(".right");
-
-//     scrollLeftBtn.addEventListener("click", function() {
-//         scrollContainer.scroll({
-//             left: scrollContainer.scrollLeft - 100,
-//             behavior: "smooth"
-//         });
-//     });
-
-//     scrollRightBtn.addEventListener("click", function() {
-//         scrollContainer.scroll({
-//             left: scrollContainer.scrollLeft + 100,
-//             behavior: "smooth"
-//         });
-//     });
-// });
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const scrollContainer = document.querySelector(".nav-container");
-    const scrollLeftBtn = document.getElementById("left");
-    const scrollRightBtn = document.getElementById("right");
-
-    // Initially hide the left arrow
-    scrollLeftBtn.style.display = "none";
-
-    // Function to check and toggle visibility of scroll arrows
-    function toggleScrollArrows() {
-        // If the scroll is at the beginning, hide the left arrow
-        if (scrollContainer.scrollLeft === 0) {
-            scrollLeftBtn.style.display = "none";
-        } else {
-            scrollLeftBtn.style.display = "block";
-        }
-
-        // If the scroll is at the end, hide the right arrow
-        if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth) {
-            scrollRightBtn.style.display = "none";
-        } else {
-            scrollRightBtn.style.display = "block";
-        }
-    }
-
-    // Initial call to toggle visibility based on initial scroll position
-    toggleScrollArrows();
-
-    // Add event listeners for scroll and button clicks
-    scrollContainer.addEventListener("scroll", toggleScrollArrows);
-    
-    scrollLeftBtn.addEventListener("click", function() {
-        scrollContainer.scrollBy({
-            left: -100,
-            behavior: "smooth"
-        });
-    });
-
-    scrollRightBtn.addEventListener("click", function() {
-        scrollContainer.scrollBy({
-            left: 100,
-            behavior: "smooth"
-        });
-    });
+window.addEventListener('resize', () => {
+  updateButtonVisibility();
 });
