@@ -1,87 +1,99 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="nav-container">
-            <div class="scroll-left">&langle;</div>
-            <ul class="nav-items">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Home</a></li>
-               
-            </ul>
-            <div class="scroll-right">&rangle;</div>
-        </div>
-    </header>
-    <script src="scripts.js"></script>
-</body>
-</html> -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizontal Navbar</title>
+<style>
+  .navbar-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .navbar {
+    display: flex;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item {
+    padding: 10px;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    z-index: 999;
+  }
+  
+  .left-button {
+    left: 0;
+    visibility: hidden;
+  }
+  
+  .right-button {
+    right: 0;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <div class="nav-container">
-            <div class="scroll-arrow left" id="left">&langle;</div>
-            <ul class="nav-list">
-                <li><a href="#">Home1</a></li>
-                <li><a href="#">Home2</a></li>
-                <li><a href="#">Home3</a></li>
-                <li><a href="#">Home4</a></li>
-                <li><a href="#">Home5</a></li>
-                <li><a href="#">Home6</a></li>
-                <li><a href="#">Home7</a></li>
-                <li><a href="#">Home8</a></li>
-                <li><a href="#">Home9</a></li>
-                <li><a href="#">Home10</a></li>
-                <li><a href="#">Home11</a></li>
-                <li><a href="#">Home12</a></li>
-                <li><a href="#">Home13</a></li>
-                <li><a href="#">Home14</a></li>
-                <li><a href="#">Home15</a></li>
-                <li><a href="#">Home16</a></li>
-                <li><a href="#">Home17</a></li>
-                <li><a href="#">Home18</a></li>
-                <li><a href="#">Home19</a></li>
-                <li><a href="#">Home20</a></li>
-                
-            </ul>
-            <div class="scroll-arrow right" id="right">&rangle;</div>
-        </div>
-    </header>
 
-    <script src="script.js"></script>
+<div class="navbar-container">
+  <button class="nav-button left-button">&lt;</button>
+  <div class="navbar">
+    <div class="nav-item">Item 1</div>
+    <div class="nav-item">Item 2</div>
+    <div class="nav-item">Item 3</div>
+    <!-- Add more nav items as needed -->
+  </div>
+  <button class="nav-button right-button">&gt;</button>
+</div>
+
+<script>
+  const navbar = document.querySelector('.navbar');
+  const leftButton = document.querySelector('.left-button');
+  const rightButton = document.querySelector('.right-button');
+
+  const scrollStep = 50; // Change this value to adjust the scroll amount
+
+  function handleScrollRight() {
+    navbar.scrollBy({
+      left: scrollStep,
+      behavior: 'smooth'
+    });
+    updateButtonVisibility();
+  }
+
+  function handleScrollLeft() {
+    navbar.scrollBy({
+      left: -scrollStep,
+      behavior: 'smooth'
+    });
+    updateButtonVisibility();
+  }
+
+  function updateButtonVisibility() {
+    leftButton.style.visibility = navbar.scrollLeft === 0 ? 'hidden' : 'visible';
+    rightButton.style.visibility =
+      navbar.scrollLeft + navbar.clientWidth >= navbar.scrollWidth ? 'hidden' : 'visible';
+  }
+
+  leftButton.addEventListener('click', handleScrollLeft);
+  rightButton.addEventListener('click', handleScrollRight);
+
+  navbar.addEventListener('scroll', updateButtonVisibility);
+
+  window.addEventListener('resize', () => {
+    updateButtonVisibility();
+  });
+</script>
+
 </body>
 </html>
