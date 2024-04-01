@@ -16,6 +16,11 @@ transition: transform 0.3s ease;
 padding: 10px 20px;
 }
 
+.nav-item:hover {
+    background-color: white;
+    color: black;
+}
+
 .nav-button {
 position: absolute;
 top: 50%;
