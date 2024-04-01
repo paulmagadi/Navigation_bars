@@ -1,118 +1,38 @@
-/* body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+<style>
+  .navbar-container {
     width: 100%;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    overflow-x: auto;
-    width: 100%;
-}
-
-.nav-items {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-items li {
-    margin-right: 20px;
-}
-
-.nav-items li:last-child {
-    margin-right: 0;
-}
-
-.nav-items li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.scroll-left,
-.scroll-right {
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.scroll-left:hover,
-.scroll-right:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-} */
-
-
-header {
+    overflow: hidden;
     position: relative;
-    width: 100%;
-}
-
-.nav-container {
-    overflow-x: auto;
-    width: 100%;
-    white-space: nowrap;
+  }
+  
+  .navbar {
     display: flex;
-    align-items: center;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.nav-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.nav-container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-
-
-.nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-list li {
-    margin-right: 60px; /* Adjust spacing between items */
-}
-
-.scroll-arrow {
-    cursor: pointer;
-    font-size: 24px;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item {
     padding: 10px;
+  }
+  
+  .nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: lightgray;
-}
-
-.scroll-arrow {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
-    font-size: 24px;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: lightgray;
-}
-
-
-
-
-.left {
+    font-size: 1.5rem;
+    color: #333;
+    z-index: 999;
+  }
+  
+  .left-button {
     left: 0;
-}
-
-.right {
+    visibility: hidden;
+  }
+  
+  .right-button {
     right: 0;
-}
+  }
+</style>
