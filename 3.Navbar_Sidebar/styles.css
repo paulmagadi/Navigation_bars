@@ -123,29 +123,6 @@ nav ul li:hover {
 }
 
 
-.navbar-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    background-color: green;
-    color: white;
-}
-
-.navbar {
-display: flex;
-overflow-x: hidden;
-transition: transform 0.3s ease;
-}
-
-.nav-item {
-padding: 10px 20px;
-}
-
-.nav-item:hover {
-    background-color: white;
-    color: black;
-}
-
 
 
 .left-button {
