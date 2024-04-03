@@ -81,6 +81,7 @@ nav {
     right: 0;
     z-index: 1000;
     overflow: hidden;
+    cursor: pointer;
 }
 
 nav ul {
@@ -135,4 +136,5 @@ position: fixed;
 .right-button {
 right: 0;
 position: fixed;
+
 }
