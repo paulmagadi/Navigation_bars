@@ -1,4 +1,4 @@
-const navbar = document.querySelector('.nav');
+const navbar = document.querySelector('nav');
 const leftButton = document.querySelector('.left-button');
 const rightButton = document.querySelector('.right-button');
 

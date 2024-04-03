@@ -80,6 +80,7 @@ nav {
     left: 0;
     right: 0;
     z-index: 1000;
+    overflow: hidden;
 }
 
 nav ul {
@@ -128,8 +129,10 @@ nav ul li:hover {
 .left-button {
 left: 0;
 visibility: hidden;
+position: fixed;
 }
 
 .right-button {
 right: 0;
+position: fixed;
 }
