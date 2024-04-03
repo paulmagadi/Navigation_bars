@@ -125,7 +125,9 @@ nav ul li:hover {
 }
 
 
-
+.navbutton {
+    z-index: 1001;
+    }
 
 .left-button {
 left: 0;
