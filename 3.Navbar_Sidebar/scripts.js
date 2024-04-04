@@ -1,8 +1,8 @@
 const navbar = document.querySelector('nav');
-const leftButton = document.querySelector('.left-button');
-const rightButton = document.querySelector('.right-button');
+const leftButton = document.querySelector('.left');
+const rightButton = document.querySelector('.right');
 
-const scrollStep = 50; // Change this value to adjust the scroll amount
+const scrollStep = 100; // Change this value to adjust the scroll amount
 
 function handleScrollRight() {
   navbar.scrollBy({

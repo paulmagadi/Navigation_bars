@@ -70,7 +70,6 @@ header img {
     margin: 1em;
 }
 
-
 nav {
     width: 100%;
     background-color: #0fab72;
@@ -80,15 +79,14 @@ nav {
     left: 0;
     right: 0;
     z-index: 1000;
-    overflow: hidden;
     cursor: pointer;
+    overflow-x: hidden;
 }
 
 nav ul {
     display: flex;
     justify-content: left;
     list-style: none;
-    overflow-x: hidden;
 }
 
 nav ul li {
@@ -125,17 +123,13 @@ nav ul li:hover {
 }
 
 
-.navbutton {
-    z-index: 1001;
-    }
-
-.left-button {
+.left{
 left: 0;
 visibility: hidden;
 position: fixed;
 }
 
-.right-button {
+.right {
 right: 0;
 position: fixed;
 
