@@ -7,7 +7,7 @@
 :root {
     --primary-color: rgb(255, 77, 0);
     --white-color: #ffffff;
-    --content-padding: 1em
+    --content-padding: .5em 1em;
 }
 
 body {
@@ -57,6 +57,8 @@ a {
     font-size: 17px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
+    outline: none;
+    
 }
 
 
@@ -86,6 +88,7 @@ a {
     padding: 0;
     background-color: var(--white-color);
     margin: 0;
+    padding: .5em;
 }
 
 .navbar .search-mobile {
@@ -102,8 +105,28 @@ a {
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     width: 100%;
-    padding: 1em;
+    padding: .5em;
+    background: none;
+    border: 2px solid var(--primary-color);
+    outline: none;
+    color: var(--primary-color);
+}
 
+
+.navbar .search-mobile button {
+    border: 1px solid var(--primary-color);
+    background-color:  var(--primary-color);
+    padding: 2px 3px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.navbar .search-mobile button svg {
+    fill: var(--white-color);
+}
+
+.navbar .search-mobile input[type=text]::placeholder {
+    color: var(--primary-color);
 }
 
 
