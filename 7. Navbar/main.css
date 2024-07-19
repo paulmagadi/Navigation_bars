@@ -14,8 +14,18 @@ body {
     background-color: #F8F9FA;
     color: #343A40;
     font-family: Arial, sans-serif;
+    position: relative;
 }
 
+.header {
+    position: fixed;
+    font-weight: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    position: absolute;
+}
 
 .navbar {
     background-color: rgb(255, 77, 0);
@@ -23,12 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: var(--content-padding);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 101;
-    cursor: pointer;
+    position: relative;
 }
 
 a {
@@ -147,6 +152,10 @@ a {
     color: var(--primary-color);
 }
 
+main {
+    position: absolute;
+}
+
 
 @media (max-width: 1000px) {
     .navbar .search-container {
@@ -195,38 +204,33 @@ a {
     }
 }
 
-.header {
+.scroll-header {
     width: 100%;
     background-color: #0fab72;
     color:  var(--white-color);
-    position: fixed;
-    top: 3rem;
-    left: 0;
-    right: 0;
-    z-index: 101;
     cursor: pointer;
     overflow-x: hidden;
     display: flex;
     justify-content: left;
 }
 
-.header a {
+.scroll-header a {
     color: var(--white-color);
     list-style: none;
     padding: .5em 2em;
 }
 
-a:hover {
+.scroll-header a:hover {
     background-color: var(--primary-color);
 }
 
-.left{
+.scroll-header .left{
     left: 0;
     visibility: hidden;
     position: fixed;
 }
 
-.right {
+.scroll-header .right {
     right: 0;
     position: fixed;
 
