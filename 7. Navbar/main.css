@@ -202,6 +202,10 @@ main {
     .nav-menu {
         display: flex;
     }
+
+    .close-menu {
+        display: block;
+    }
 }
 
 .scroll-header {
@@ -228,11 +232,13 @@ main {
     left: 0;
     visibility: hidden;
     position: fixed;
+    background-color: #0fab72;
 }
 
 .scroll-header .right {
     right: 0;
     position: fixed;
+    background-color: #0fab72;
 
 }
 
