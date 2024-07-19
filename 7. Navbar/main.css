@@ -19,7 +19,7 @@ body {
 
 .navbar {
     background-color: rgb(255, 77, 0);
-    color: #ffffff;
+    color: var(--white-color);
     display: flex;
     justify-content: space-between;
     padding: var(--content-padding);
@@ -138,5 +138,57 @@ a {
     .navbar .search-button-mobile {
         display: flex;
     }
+}
+
+@media (max-width:560px) {
+    .navbar {
+        padding: .5em;
+    }
+    .navbar  a {
+        color: var(--white-color);
+        font-size: 1rem;
+    }
+
+    .navlinks a {
+        margin: 0 .1em;
+    }
+}
+
+
+.header {
+    width: 100%;
+    background-color: #0fab72;
+    color:  var(--white-color);
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    cursor: pointer;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: left;
+}
+
+.header a {
+    color: var(--white-color);
+    list-style: none;
+    padding: .5em 2em;
+}
+
+a:hover {
+    background-color: var(--primary-color);
+}
+
+.left{
+    left: 0;
+    visibility: hidden;
+    position: fixed;
+}
+
+.right {
+    right: 0;
+    position: fixed;
+
 }
 
