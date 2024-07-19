@@ -23,7 +23,12 @@ body {
     display: flex;
     justify-content: space-between;
     padding: var(--content-padding);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    cursor: pointer;
 }
 
 a {
@@ -39,10 +44,24 @@ a {
 
 .navlinks a {
     margin: 0 .5em;
+    
 }
 
 .navlinks a:hover {
     border-bottom: 2px solid var(--white-color);
+}
+
+.nav-menu {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+.close-menu {
+    float: right;
+    padding: .5em;
 }
 
 .navbar .search {
@@ -60,7 +79,6 @@ a {
     outline: none;
     
 }
-
 
 .navbar .search button {
     border: none;
@@ -149,11 +167,33 @@ a {
         font-size: 1rem;
     }
 
-    .navlinks a {
-        margin: 0 .1em;
+    .navlinks  {
+        display: none;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: var(--primary-color);
+    }
+
+    .navlinks  a {
+        display: block;
+        width: 100%;
+        color: var(--white-color);
+        padding: .5em 1em;
+        border-bottom: 2px solid rgb(219, 216, 216);
+    }
+
+    .navlinks  a:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+
+    .nav-menu {
+        display: flex;
     }
 }
-
 
 .header {
     width: 100%;
@@ -163,7 +203,7 @@ a {
     top: 3rem;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 101;
     cursor: pointer;
     overflow-x: hidden;
     display: flex;
