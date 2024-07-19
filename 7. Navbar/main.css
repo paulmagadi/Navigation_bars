@@ -257,3 +257,28 @@ main {
     
     }
 }
+
+
+.sidebar {
+    width: 20%;
+    background-color: rgb(229, 229, 231);
+    overflow-y: scroll;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+    padding: 2em 0;
+}
+
+.sidebar h3 {
+    padding: .7em 2em;
+}
+
+.sidebar p, .sidebar h3 {
+    padding: .7em 2em;
+}
+
+.sidebar p:hover {
+    background-color: green;
+}
