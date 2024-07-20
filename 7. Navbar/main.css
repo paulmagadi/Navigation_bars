@@ -258,7 +258,6 @@ main {
     }
 }
 
-
 .sidebar {
     width: 20%;
     background-color: rgb(229, 229, 231);
@@ -280,5 +279,5 @@ main {
 }
 
 .sidebar p:hover {
-    background-color: green;
+    background-color: var(--primary-color);
 }
